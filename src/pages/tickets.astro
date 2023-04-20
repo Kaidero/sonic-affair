@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="A SONIC AFFAIR">
+  <div class='tickets-content'>
+    <iframe
+      id='eventbrite-iframe'
+      src="//eventbrite.ca/tickets-external?eid=621374346397&amp;ref=etckt" 
+      frameborder="0" 
+      scrolling="auto"
+     />
+  </div>
+</Layout>
+
+<style lang='scss'>
+  .tickets-content {
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+
+    @media (max-width: 1200px) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 650px;
+    border-radius: 2rem;
+
+    @media (max-width: 1200px) {
+      height: 450px;
+    }
+  }
+</style>

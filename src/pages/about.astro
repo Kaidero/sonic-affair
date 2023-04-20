@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="A SONIC AFFAIR">
+  <div class='about-content'>
+    <div class='card'>
+      <div class='question'>
+        What is the theme of the event?
+      </div>
+      <div class='answer'>
+        Traveling Circus
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        Are there guidelines?
+      </div>
+      <div class='answer'>
+        <div>
+          1. Follow the theme (dress, contribution)
+        </div>
+        <div>
+          2. Contribute creatively to the event 
+        </div>
+        <div>
+          3. Do what you do best or what you’ve always wanted to do 
+        </div>
+        <div>
+          4. Help clean up 
+        </div>
+        <div>
+          5. Bring your own food/drink/supplies: don’t exclusively rely on the other attendees 
+        </div>
+        <div>
+          6. No pets
+        </div>
+        <div>
+         7. Buy a ticket
+        </div>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        How do I contribute creatively to the event?
+      </div>
+      <div class='answer'>
+        Whether through music, dance, food, drink, games or even by helping setting up the infrastructure on Thursday. This is your roadshow.
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        Where is the event?
+      </div>
+      <div class='answer'>
+        Western Slope of Colorado. The one-mile private property is situated on a river surrounded by red rock. From Denver, expect ~4.5hrs for your commute. Exact coordinates will be provided the week of the event. Plan to arrive Thursday or Friday morning.
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        When is the event?
+      </div>
+      <div class='answer'>
+        Thursday June 22-Sunday June 25. We've extended this year's event by an extra day (Thursday) in order to give proper time for setting up.
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        What do the ticket proceeds fund?
+      </div>
+      <div class='answer'>
+        The ticket fees fund the infrastructure of the event: stage, lounge area, equipment rentals, propery rental, power, etc.
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        Who do I contact if I have a question?
+      </div>
+      <div class='answer'>
+        You can contact Mark at 610-804-0634 or reach out to one of last year's attendees.
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='question'>
+        What is your refund policy?
+      </div>
+      <div class='answer'>
+        No refunds.
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style lang='scss'>
+  .question {
+    font-weight: 600;
+    font-size: 2.25rem;
+
+    @media (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
+  }
+  .answer {
+    font-weight: 300;
+    font-size: 1.5rem;
+
+    @media (max-width: 1200px) {
+      font-size: 1rem;
+    }
+  }
+  .about-content {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (max-width: 1200px) {
+      margin-top: 1.5rem;
+      gap: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+  .card {
+    gap: 2rem;
+    padding: 5rem;
+    font-size: 2rem;
+    background: #00000080;
+    border: 1px solid #ffffff8f;
+    border-radius: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 1200px) {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+</style>
