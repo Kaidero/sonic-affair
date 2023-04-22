@@ -104,7 +104,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: var(--text-size-large);
 
     @media (max-width: 1200px) {
-      font-size: var(--text-size);
+      font-size: var(--mobile-text-size-large);
     }
   }
   .answer {
@@ -112,13 +112,13 @@ import Layout from '../layouts/Layout.astro';
     font-size: var(--text-size);
 
     @media (max-width: 1200px) {
-      font-size: var(--mobile-text-size-large);
+      font-size: var(--mobile-text-size);
     }
   }
 
   ul.answer {
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
 
   .about-content {
@@ -130,7 +130,6 @@ import Layout from '../layouts/Layout.astro';
     @media (max-width: 1200px) {
       margin-top: 1.5rem;
       gap: 1rem;
-      font-size: var(--mobile-text-size);
     }
   }
   .card {
@@ -145,8 +144,8 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
 
     @media (max-width: 1200px) {
-      padding: 1rem;
-      gap: 0.5rem;
+      padding: 2rem;
+      gap: 1rem;
     }
   }
 </style>
