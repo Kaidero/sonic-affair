@@ -26,16 +26,15 @@ import Layout from '../layouts/Layout.astro';
   .iframe-overlay {
     pointer-events: none; 
     position: absolute;
-    background: black;
     width: calc(100% - (2 * var(--side-padding)));
     height: 600px;
     border-radius: 2rem;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: hue;
     position: absolute;
-    background: #000000;
+    background: #fc00ff;
 
     @media (max-width: 1200px) {
-      height: 450px;
+      display: none;
     }
   }
 
