@@ -7,20 +7,16 @@ import Layout from '../layouts/Layout.astro';
     <div class='card-wrapper'>
       <div class='card tiger'/>
 
-      <div class='card grow'>
-        <div class='card-content'>
-          <div>
-            JUNE 23-25
-          </div>
-          <div>
-            LINEUP TBA
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class='card about'>
-      <div class='card-content'>
-        A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQS before registering.
+      <div class='card info'>
+        <p>
+          A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQS before registering.
+        </p>
+        <h1>
+          JUNE 23-25
+        </h1>
+        <h1>
+          LINEUP TBA
+        </h1>
       </div>
     </div>
   </div>
@@ -48,18 +44,9 @@ import Layout from '../layouts/Layout.astro';
       flex-direction: column;
     }
   }
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
 
-    @media (max-width: 1200px) {
-      gap: 0.5rem;
-    }
-  }
   .card {
     padding: 5rem;
-    font-size: 2rem;
     text-align: center;
     background: #00000080;
     border: 1px solid #ffffff8f;
@@ -68,6 +55,8 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    flex-direction: column;
 
     &.tiger {
       padding: 0;
@@ -77,15 +66,27 @@ import Layout from '../layouts/Layout.astro';
       background-image: url('/public/tiger.png');
 
       @media (max-width: 1200px) {
+        gap: 0.5rem;
         height: auto
       }
     }
 
-    &.grow {
-      padding: 0;
+    &.info {
+      padding: 4rem;
       flex-grow: 1;
       font-weight: 600;
       font-size: 2.5rem;
+
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.5rem;
+      }
 
       @media (max-width: 1200px) {
         padding: 1rem;
