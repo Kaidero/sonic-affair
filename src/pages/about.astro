@@ -101,18 +101,18 @@ import Layout from '../layouts/Layout.astro';
 <style lang='scss'>
   .question {
     font-weight: 600;
-    font-size: 2.25rem;
+    font-size: var(--text-size-large);
 
     @media (max-width: 1200px) {
-      font-size: 1.5rem;
+      font-size: var(--text-size);
     }
   }
   .answer {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: var(--text-size);
 
     @media (max-width: 1200px) {
-      font-size: 1rem;
+      font-size: var(--mobile-text-size-large);
     }
   }
 
@@ -130,13 +130,12 @@ import Layout from '../layouts/Layout.astro';
     @media (max-width: 1200px) {
       margin-top: 1.5rem;
       gap: 1rem;
-      font-size: 0.75rem;
+      font-size: var(--mobile-text-size);
     }
   }
   .card {
     gap: 1rem;
     padding: 2rem;
-    font-size: 2rem;
     background: #00000080;
     border: 1px solid #ffffff8f;
     border-radius: 2rem;
