@@ -4,48 +4,45 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="A SONIC AFFAIR">
   <div class='home-content'>
     <div class='card-wrapper'>
-      <div class='vertical-card-wrapper'>
-        <div class='card date'>
-          <h1>
-            JUNE 22-25
-          </h1>
-        </div>
         <div class='card tiger'>
           <img src='/public/tiger.png' />
         </div>
-      </div>
 
-      <div class='card info'>
-        <p>
-          A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
-        </p>
-        <div>
-        </div>
-      </div>
-
-      <div class='card lineup'>
-        <div class='lineup-header'>
-          <h1 class='card-header'>
-            MUSIC
-          </h1>
-          <div>
-            <h2>
-              PHASE ONE
-            </h2>
-            <h2>
-              MORE TBA
-            </h2>
+        <div class='card info'>
+          <div class='top-info'>
+            <h1 class='card-header'>
+              JUNE 22-25
+            </h1>
+            <p>
+              A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
+            </p>
           </div>
-        </div>
-        <div class='artists-wrapper'>
-          <div class='artist'>HUNTER</div>
-          <div class='artist'>JL</div>
-          <div class='artist'>JUSTIN KLISE</div>
-          <div class='artist'>LAURAIIIN</div>
-          <div class='artist'>MASS RELAY</div>
-          <div class='artist'>MESKA</div>
-          <div class='artist'>SIXTYFOURBIT</div>
-          <div class='artist'>THE WARDEN</div>
+
+          <div class='bottom-info'>
+            <div class='lineup-header'>
+              <h1 class='card-header'>
+                LINEUP
+              </h1>
+              <div>
+                <h2>
+                  PHASE ONE
+                </h2>
+                <h2>
+                  MORE TBA
+                </h2>
+              </div>
+            </div>
+
+            <div class='artists-wrapper'>
+              <div class='artist'>JL</div>
+              <div class='artist'>JUSTIN KLISE</div>
+              <div class='artist'>LAURAIIIN</div>
+              <div class='artist'>MASS RELAY</div>
+              <div class='artist'>MESKA</div>
+              <div class='artist'>SIXTYFOURBIT</div>
+              <div class='artist'>THE WARDEN</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -53,26 +50,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style lang='scss'>
-  .artists-wrapper {
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 0.5rem;
-
-    .artist {
-      border-radius: 1rem;
-      padding: 0.25rem 1rem;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-
-    @media (max-width: 1200px) {
-      row-gap: 0.5rem;
-      flex-direction: column;
-    }
-  }
-  
   .home-content {
     margin-top: 3rem;
     display: flex;
@@ -106,23 +83,6 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  .lineup-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    div {
-      height: 2rem;
-    }
-    h2 {
-      margin: 0;
-      height: auto;
-      font-size: 1rem;
-      line-height: 1rem;
-    }
-  }
-
   .card {
     padding: 2rem;
     text-align: center;
@@ -143,10 +103,10 @@ import Layout from '../layouts/Layout.astro';
 
     &.tiger {
       padding: 0;
-      height: 20rem;
+      height: 33rem;
+      flex-shrink: 0;
       aspect-ratio: 1 / 1;
       overflow: hidden;
-      width: 100%;
 
       img {
         overflow: hidden;
@@ -160,8 +120,8 @@ import Layout from '../layouts/Layout.astro';
     }
 
     &.info {
+      justify-content: space-between;
       padding: 2rem;
-      flex-grow: 1;
       font-weight: 600;
 
       h2 {
@@ -176,17 +136,63 @@ import Layout from '../layouts/Layout.astro';
         font-size: var(--text-size);
       }
 
-      @media (max-width: 1200px) {
-        padding: 1rem;
-        font-size: var(--text-size-large);
-      }
-    }
+      .top-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
 
-    &.date {
-      flex-grow: 1;
-      
+        @media (max-width: 1200px) {
+          gap: 0.5rem;
+        }
+      }
+
+      .bottom-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (max-width: 1200px) {
+          gap: 0.5rem;
+        }
+      }
+
+      .lineup-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        div {
+          height: 2rem;
+        }
+        h2 {
+          margin: 0;
+          height: auto;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+      }
+
+      .artists-wrapper {
+        padding: 0 2rem;
+
+        .artist {
+          border-radius: 1rem;
+          padding: 0 1rem;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 1200px) {
+          padding: 0 2rem;
+        }
+      }
+
       @media (max-width: 1200px) {
-        padding: 1rem;
+        padding: 3rem 1rem;
+        font-size: var(--text-size-large);
       }
     }
   }
