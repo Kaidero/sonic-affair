@@ -4,44 +4,40 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="A SONIC AFFAIR">
   <div class='home-content'>
     <div class='card-wrapper'>
-        <div class='card tiger'>
-          <img src='/public/tiger.png' />
+      <div class='card tiger' />
+      <div class='card info'>
+        <div class='top-info'>
+          <h1 class='card-header'>
+            JUNE 22-25
+          </h1>
+          <p>
+            A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
+          </p>
         </div>
 
-        <div class='card info'>
-          <div class='top-info'>
+        <div class='bottom-info'>
+          <div class='lineup-header'>
             <h1 class='card-header'>
-              JUNE 22-25
+              LINEUP
             </h1>
-            <p>
-              A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
-            </p>
+            <div>
+              <h2>
+                PHASE ONE
+              </h2>
+              <h2>
+                MORE TBA
+              </h2>
+            </div>
           </div>
 
-          <div class='bottom-info'>
-            <div class='lineup-header'>
-              <h1 class='card-header'>
-                LINEUP
-              </h1>
-              <div>
-                <h2>
-                  PHASE ONE
-                </h2>
-                <h2>
-                  MORE TBA
-                </h2>
-              </div>
-            </div>
-
-            <div class='artists-wrapper'>
-              <div class='artist'>JL</div>
-              <div class='artist'>JUSTIN KLISE</div>
-              <div class='artist'>LAURAIIIN</div>
-              <div class='artist'>MASS RELAY</div>
-              <div class='artist'>MESKA</div>
-              <div class='artist'>SIXTYFOURBIT</div>
-              <div class='artist'>THE WARDEN</div>
-            </div>
+          <div class='artists-wrapper'>
+            <div class='artist'>JL</div>
+            <div class='artist'>JUSTIN KLISE</div>
+            <div class='artist'>LAURAIIIN</div>
+            <div class='artist'>MASS RELAY</div>
+            <div class='artist'>MESKA</div>
+            <div class='artist'>SIXTYFOURBIT</div>
+            <div class='artist'>THE WARDEN</div>
           </div>
         </div>
       </div>
@@ -107,11 +103,8 @@ import Layout from '../layouts/Layout.astro';
       flex-shrink: 0;
       aspect-ratio: 1 / 1;
       overflow: hidden;
-
-      img {
-        overflow: hidden;
-      }
-    
+      background-image: url('/public/tiger.png');
+      background-size: cover;
 
       @media (max-width: 1200px) {
         gap: 0.5rem;
