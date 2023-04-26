@@ -1,27 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-
 <Layout title="A SONIC AFFAIR">
   <div class='home-content'>
     <div class='card-wrapper'>
-      <div class='card tiger'/>
+      <div class='vertical-card-wrapper'>
+        <div class='card date'>
+          <h1>
+            JUNE 22-25
+          </h1>
+        </div>
+        <div class='card tiger'>
+          <img src='/public/tiger.png' />
+        </div>
+      </div>
 
       <div class='card info'>
         <p>
           A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
         </p>
         <div>
-          <h1>
-            JUNE 22-25
-          </h1>
         </div>
       </div>
-    </div>
-    <div class='card'>
-      <div>
+
+      <div class='card lineup'>
         <div class='lineup-header'>
-          <h1>
+          <h1 class='card-header'>
             MUSIC
           </h1>
           <div>
@@ -29,9 +33,19 @@ import Layout from '../layouts/Layout.astro';
               PHASE ONE
             </h2>
             <h2>
-              [ A-Z ]
+              MORE TBA
             </h2>
           </div>
+        </div>
+        <div class='artists-wrapper'>
+          <div class='artist'>HUNTER</div>
+          <div class='artist'>JL</div>
+          <div class='artist'>JUSTIN KLISE</div>
+          <div class='artist'>LAURAIIIN</div>
+          <div class='artist'>MASS RELAY</div>
+          <div class='artist'>MESKA</div>
+          <div class='artist'>SIXTYFOURBIT</div>
+          <div class='artist'>THE WARDEN</div>
         </div>
       </div>
     </div>
@@ -39,6 +53,26 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style lang='scss'>
+  .artists-wrapper {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.5rem;
+
+    .artist {
+      border-radius: 1rem;
+      padding: 0.25rem 1rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 1200px) {
+      row-gap: 0.5rem;
+      flex-direction: column;
+    }
+  }
+  
   .home-content {
     margin-top: 3rem;
     display: flex;
@@ -61,19 +95,25 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  .lineup-header {
+  .vertical-card-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+
+    @media (max-width: 1200px) {
+      gap: 2rem;
+      flex-direction: column;
+    }
+  }
+
+  .lineup-header {
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
 
     div {
       height: 2rem;
-    }
-    h1 {
-      margin: 0;
-      line-height: 1.7rem;
-      display: inline-block;
     }
     h2 {
       margin: 0;
@@ -105,8 +145,13 @@ import Layout from '../layouts/Layout.astro';
       padding: 0;
       height: 20rem;
       aspect-ratio: 1 / 1;
-      background-size: cover;
-      background-image: url('/public/tiger.png');
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        overflow: hidden;
+      }
+    
 
       @media (max-width: 1200px) {
         gap: 0.5rem;
@@ -137,9 +182,7 @@ import Layout from '../layouts/Layout.astro';
       }
     }
 
-    &.about {
-      font-size: var(--text-size);
-      padding: 5rem;
+    &.date {
       flex-grow: 1;
       
       @media (max-width: 1200px) {
