@@ -4,7 +4,11 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="A SONIC AFFAIR">
   <div class='home-content'>
     <div class='card-wrapper'>
-      <div class='card tiger' />
+      <img
+        src="asf_web.svg"
+        alt="A sonic affair lineup flyer"
+      />
+
       <div class='card info'>
         <div class='top-info'>
           <h1 class='card-header'>
@@ -13,30 +17,12 @@ import Layout from '../layouts/Layout.astro';
           <p>
             A Sonic Affair is a thematic experience based around creative contribution and live music. Please read the FAQ before registering.
           </p>
-        </div>
-
-        <div class='bottom-info'>
-          <div class='lineup-header'>
-            <h1 class='card-header'>
-              LINEUP
-            </h1>
-          </div>
-
-          <div class='artists-wrapper'>
-            <div class='artist'>JL</div>
-            <div class='artist'>JUSTIN KLISE</div>
-            <div class='artist'>LAURAIN</div>
-            <div class='artist'>MASS RELAY</div>
-            <div class='artist'>MESKA</div>
-            <div class='artist'>MESSEA</div>
-            <div class='artist'>MIGEE</div>
-            <div class='artist'>MLRTYME</div>
-            <div class='artist'>MOCEAN</div>
-            <div class='artist'>RYNS</div>
-            <div class='artist'>SILENT J</div>
-            <div class='artist'>SIXTYFOURBIT</div>
-            <div class='artist'>THE WARDEN</div>
-          </div>
+          </br>
+          <p>
+            <strong>ONLINE TICKET PURCHASES ONLY.</strong> No on-site purchases. Coordinates will be texted out to all ticket holders next Wednesday. Please have proof of purchase ready upon arrival.
+          </p>
+          </br>
+          <p>Click <a href="/terms/">HERE</a> to read the events terms and conditions</p>
         </div>
       </div>
     </div>
@@ -56,11 +42,20 @@ import Layout from '../layouts/Layout.astro';
       flex-direction: column;
     }
   }
+
   .card-wrapper {
     display: flex;
     gap: 2rem;
 
+    img {
+      width: 50%;
+    }
+
     @media (max-width: 1200px) {
+      img {
+        width: 100%;
+      }
+
       gap: 2rem;
       flex-direction: column;
     }
@@ -90,24 +85,14 @@ import Layout from '../layouts/Layout.astro';
     gap: 1.5rem;
     flex-direction: column;
 
+    a, a:visited {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
     h1 {
       font-size: var(--text-size-large);
       margin: 0;
-    }
-
-    &.tiger {
-      padding: 0;
-      height: 34rem;
-      flex-shrink: 0;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background-image: url('/public/tiger.png');
-      background-size: cover;
-
-      @media (max-width: 1200px) {
-        gap: 0.5rem;
-        height: auto
-      }
     }
 
     &.info {
