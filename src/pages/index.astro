@@ -26,6 +26,26 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
+
+    <div class='card activities'>
+        <h1 class='card-header' style='width: 100%'>
+          ATTENDEE CONTRIBUTED ACTIVITIES
+        </h1>
+        <div class='activities-list'>
+          <div>Uncrustables station (Friday night)</div>
+          <div>Fried Chicken & Pickles (Saturday night)</div>
+          <div>Gourmet Grilled Cheese (Saturday night)</div>
+          <div>Cocktail Hour (Saturday @ sunset)</div>
+          <div>Frick Frack Black Jack (unofficial)</div>
+          <div>Jeopardy</div>
+          <div>Group Skit</div>
+          <div>Talent Show</div>
+          <div>Watercolors</div>
+          <div>Friendship Bracelets</div>
+          <div>Le Lounge</div>
+          <div>Silent Auction</div>
+        </div>
+      </div>
   </div>
 </Layout>
 
@@ -95,6 +115,17 @@ import Layout from '../layouts/Layout.astro';
       margin: 0;
     }
 
+    &.activities {
+      .activities-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-weight: 300;
+        font-size: var(--text-size);
+        list-style-type: none;
+      }
+    }
+
     &.info {
       justify-content: space-between;
       padding: 2rem;
@@ -105,7 +136,7 @@ import Layout from '../layouts/Layout.astro';
         font-weight: 300;
         margin: 0;
       }
-
+      
       p {
         margin: 0;
         font-weight: 300;
