@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
   <div class='home-content'>
     <div class='card-wrapper'>
       <img
+        class='logo'
         src="asf_web.svg"
         alt="A sonic affair lineup flyer"
       />
@@ -21,33 +22,50 @@ import Layout from '../layouts/Layout.astro';
           <p>
             <strong>ONLINE TICKET PURCHASES ONLY.</strong> No on-site purchases. Coordinates will be texted out to all ticket holders on Wednesday. Please have proof of purchase ready upon arrival.
           </p>
+
+          <p>
+          <strong>NOTE:</strong> If you are sensitive to loud music while winding down, please make sure to set up camp at a reasonable distance from the main party area. Late night music is open ended and will likely go late this year.
+          </p>
           </br>
           <p>Click <a href="/terms/">HERE</a> to read the events terms and conditions</p>
         </div>
       </div>
     </div>
 
-    <div class='card activities'>
-        <h1 class='card-header' style='width: 100%'>
-          ATTENDEE CONTRIBUTED ACTIVITIES
-        </h1>
-        <div class='activities-list'>
-          <div>Uncrustables station (Friday night)</div>
-          <div>Fried Chicken & Pickles (Saturday night)</div>
-          <div>Gourmet Grilled Cheese (Saturday night)</div>
-          <div>Cocktail Hour (Saturday @ sunset)</div>
-          <div>Frick Frack Blackjack (unofficial)</div>
-          <div>Sound Bath</div>
-          <div>Jeopardy</div>
-          <div>Group Skit</div>
-          <div>Talent Show</div>
-          <div>Watercolors</div>
-          <div>Friendship Bracelets</div>
-          <div>Le Lounge</div>
-          <div>Silent Auction</div>
+    <div class='card-wrapper'>
+        <div class='card location'>
+          <h1 class='card-header' style='width: 100%'>
+            LOCATION
+          </h1>
+          <div>38°38'23.8"N 108°56'52.7"W</div>
+          <img
+              src="asf_map.jpeg"
+              alt="A sonic affair lineup flyer"
+              />
+        </div>
+
+        <div class='card activities'>
+          <h1 class='card-header' style='width: 100%'>
+            ATTENDEE CONTRIBUTED ACTIVITIES
+          </h1>
+          <div class='activities-list'>
+            <div>Uncrustables station (Friday night)</div>
+            <div>Fried Chicken & Pickles (Saturday night)</div>
+            <div>Gourmet Grilled Cheese (Saturday night)</div>
+            <div>Cocktail Hour (Saturday @ sunset)</div>
+            <div>Frick Frack Blackjack (unofficial)</div>
+            <div>Sound Bath</div>
+            <div>Jeopardy</div>
+            <div>Group Skit</div>
+            <div>Talent Show</div>
+            <div>Watercolors</div>
+            <div>Friendship Bracelets</div>
+            <div>Le Lounge</div>
+            <div>Silent Auction</div>
+          </div>
         </div>
       </div>
-  </div>
+    </div>
 </Layout>
 
 <style lang='scss'>
@@ -68,12 +86,12 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     gap: 2rem;
 
-    img {
+    .logo {
       width: 50%;
     }
 
     @media (max-width: 1200px) {
-      img {
+      .logo {
         width: 100%;
       }
 
@@ -117,6 +135,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     &.activities {
+      flex: 1 1 0px;
       .activities-list {
         display: flex;
         flex-direction: column;
@@ -125,6 +144,16 @@ import Layout from '../layouts/Layout.astro';
         font-size: var(--text-size);
         list-style-type: none;
       }
+    }
+
+    &.location {
+      flex: 1 1 0px;
+      img {
+        width: 100%;
+      }
+
+      font-size: var(--text-size);
+      font-weight: 300;
     }
 
     &.info {
